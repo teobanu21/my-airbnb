@@ -14,7 +14,7 @@ import {
 
 import HeartButton from "../HeartButton";
 import Button from "../Button";
-import ClientOnly from "../ClientOnly";
+
 
 interface ListingCardProps {
     data: SafeListing;
@@ -78,30 +78,31 @@ const ListingCard: React.FC<ListingCardProps> = ({
             <div className="flex flex-col gap-2 w-full">
                 <div
                     className="
-            aspect-square 
-            w-full 
-            relative 
-            overflow-hidden 
-            rounded-xl
-          "
+                        aspect-square 
+                        w-full 
+                        relative 
+                        overflow-hidden 
+                        rounded-xl
+                    "
                 >
                     <Image
                         fill
                         className="
-              object-cover 
-              h-full 
-              w-full 
-              group-hover:scale-110 
-              transition
-            "
+                            object-cover 
+                            h-full 
+                            w-full 
+                            group-hover:scale-110 
+                            transition
+                            "
                         src={data.imageSrc}
                         alt="Listing"
                     />
                     <div className="
-            absolute
-            top-3
-            right-3
-          ">
+                            absolute
+                            top-3
+                            right-3
+                        "
+                    >
                         <HeartButton
                             listingId={data.id}
                             currentUser={currentUser}

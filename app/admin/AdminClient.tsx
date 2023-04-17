@@ -11,15 +11,17 @@ import Heading from "@/app/components/Heading";
 import Container from "@/app/components/Container";
 import ListingCard from "@/app/components/listings/ListingCard";
 
-interface PropertiesClientProps {
+
+interface AdminClientProps {
     listings: SafeListing[],
     currentUser?: SafeUser | null,
 }
 
-const PropertiesClient: React.FC<PropertiesClientProps> = ({
+const AdminClient: React.FC<AdminClientProps> = ({
     listings,
     currentUser
 }) => {
+
     const router = useRouter();
     const [deletingId, setDeletingId] = useState('');
 
@@ -39,12 +41,11 @@ const PropertiesClient: React.FC<PropertiesClientProps> = ({
             })
     }, [router]);
 
- 
     return (
         <Container>
             <Heading
                 title="Properties"
-                subtitle="List of your properties"
+                subtitle="All the properties listed on Airbnb"
             />
             <div
                 className="
@@ -75,4 +76,6 @@ const PropertiesClient: React.FC<PropertiesClientProps> = ({
     );
 }
 
-export default PropertiesClient;
+
+export default AdminClient;
+
