@@ -68,7 +68,7 @@ const AdminClient: React.FC<AdminClientProps> = ({
                         onAction={onDelete}
                         disabled={deletingId === listing.id}
                         actionLabel="Delete property"
-                        currentUser={currentUser}
+                        //currentUser={currentUser}
                     />
                 ))}
             </div>
